@@ -1,0 +1,45 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import MenuCategory from '../components/MenuCategory.astro';
+import menuData from '../data/menu.json';
+---
+
+<MainLayout title="Carta | CIMA">
+  <Hero 
+    title="La Carta" 
+    subtitle="Una sinfonía de ingredientes endémicos y técnicas contemporáneas"
+    imagePath="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+    size="medium"
+  />
+
+  <!-- Widened Menu Screen -->
+  <div class="bg-[#0a0a0a] min-h-screen relative pb-16">
+    <!-- Sophisticated Sticky Navy for Menu -->
+    <div class="sticky top-24 z-40 bg-[#0a0a0a]/90 backdrop-blur-xl border-b border-white/5 py-6 flex justify-center space-x-6 md:space-x-16 overflow-x-auto w-full px-4">
+      {menuData.categories.map((category) => (
+        <a 
+          href={`#${category.id}`} 
+          class="whitespace-nowrap uppercase tracking-[0.2em] text-sm md:text-base font-light text-neutral-400 hover:text-white transition-colors duration-300 relative group"
+        >
+          {category.title}
+          <span class="absolute -bottom-3 left-1/2 w-0 h-[2px] bg-orange-500 group-hover:w-full group-hover:left-0 transition-all duration-300"></span>
+        </a>
+      ))}
+    </div>
+
+    <!-- Background decorative blurred shapes to fill sides -->
+    <div class="absolute top-40 left-0 w-96 h-96 bg-orange-500/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+    <div class="absolute bottom-40 right-0 w-[30rem] h-[30rem] bg-stone-500/5 rounded-full blur-[150px] pointer-events-none -z-10"></div>
+
+    <!-- The Menu (Carta) width expanded from 7xl to full with 1400 max -->
+    <div class="space-y-24 w-full max-w-[1400px] mx-auto px-6 lg:px-16 pt-16 relative z-10">
+      {menuData.categories.map((category) => (
+        <div id={category.id} class="scroll-mt-48 pt-4">
+          <MenuCategory title={category.title} items={category.items} />
+        </div>
+      ))}
+    </div>
+    
+    </div>
+</MainLayout>

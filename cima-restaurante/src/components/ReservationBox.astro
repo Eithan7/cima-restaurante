@@ -1,0 +1,93 @@
+---
+---
+<div class="bg-[#0f0f0f] border border-white/10 p-10 max-w-md w-full mx-auto relative overflow-hidden group" id="reserva">
+  <!-- Subtle orange glow on hover -->
+  <div class="absolute inset-0 bg-orange-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none"></div>
+
+  <h3 class="text-2xl font-cinzel text-center text-white uppercase tracking-[0.2em] mb-2 relative z-10">Su Mesa</h3>
+  <div class="w-8 h-[1px] bg-orange-500 mx-auto mb-8"></div>
+  
+  <form class="space-y-8 relative z-10" onsubmit="event.preventDefault(); alert('Solicitud de reservación recibida.');">
+    <!-- Custom styling to look like a high-end form with orange boxes -->
+    
+    <div class="relative group">
+      <label for="date" class="block text-[10px] font-medium text-neutral-500 uppercase tracking-widest mb-2 transition-colors focus-within:text-orange-500">Fecha</label>
+      <input 
+        type="date" 
+        id="date" 
+        name="date" 
+        class="w-full bg-[#0a0a0a]/50 border border-orange-500/40 px-4 py-4 text-white focus:ring-1 focus:ring-orange-500 focus:border-orange-500 transition-colors css-date-icon-white rounded-sm shadow-[inset_0_0_10px_rgba(234,88,12,0.05)] hover:border-orange-500/70"
+        required
+        aria-label="Seleccionar fecha para la reserva"
+      />
+    </div>
+    
+    <div class="grid grid-cols-2 gap-8">
+      <div class="relative group time-group">
+        <label for="time" class="block text-[10px] font-medium text-neutral-500 uppercase tracking-widest mb-2 transition-colors group-hover:text-orange-500">Hora</label>
+        <select 
+          id="time" 
+          name="time" 
+          class="w-full bg-[#0a0a0a]/50 border border-orange-500/40 px-4 py-4 text-white focus:ring-1 focus:ring-orange-500 focus:border-orange-500 transition-colors appearance-none rounded-sm shadow-[inset_0_0_10px_rgba(234,88,12,0.05)] hover:border-orange-500/70 cursor-pointer"
+          required
+          aria-label="Seleccionar hora para la reserva"
+        >
+          <option value="" class="bg-[#0a0a0a]">Seleccione</option>
+          <option value="17:00" class="bg-[#0a0a0a]">5:00 PM</option>
+          <option value="18:00" class="bg-[#0a0a0a]">6:00 PM</option>
+          <option value="19:00" class="bg-[#0a0a0a]">7:00 PM</option>
+          <option value="20:00" class="bg-[#0a0a0a]">8:00 PM</option>
+          <option value="21:00" class="bg-[#0a0a0a]">9:00 PM</option>
+        </select>
+        <!-- Custom arrow -->
+        <div class="absolute right-4 top-[60%] -translate-y-1/2 pointer-events-none text-orange-500 opacity-80 group-hover:opacity-100 transition-opacity">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </div>
+      </div>
+      <div class="relative group guests-group">
+        <label for="guests" class="block text-[10px] font-medium text-neutral-500 uppercase tracking-widest mb-2 transition-colors group-hover:text-orange-500">Comensales</label>
+        <select 
+          id="guests" 
+          name="guests" 
+          class="w-full bg-[#0a0a0a]/50 border border-orange-500/40 px-4 py-4 text-white focus:ring-1 focus:ring-orange-500 focus:border-orange-500 transition-colors appearance-none rounded-sm shadow-[inset_0_0_10px_rgba(234,88,12,0.05)] hover:border-orange-500/70 cursor-pointer"
+          required
+          aria-label="Seleccionar número de personas"
+        >
+          <option value="1" class="bg-[#0a0a0a]">1 Persona</option>
+          <option value="2" class="bg-[#0a0a0a]" selected>2 Personas</option>
+          <option value="3" class="bg-[#0a0a0a]">3 Personas</option>
+          <option value="4" class="bg-[#0a0a0a]">4 Personas</option>
+          <option value="5+" class="bg-[#0a0a0a]">5+ Personas</option>
+        </select>
+        <!-- Custom arrow -->
+        <div class="absolute right-4 top-[60%] -translate-y-1/2 pointer-events-none text-orange-500 opacity-80 group-hover:opacity-100 transition-opacity">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+        </div>
+      </div>
+    </div>
+    
+    <button 
+      type="submit" 
+      class="w-full bg-orange-600 border border-orange-500 text-white hover:bg-orange-500 font-medium py-4 px-4 transition-all duration-500 uppercase tracking-[0.2em] text-xs mt-8 shadow-[0_0_15px_rgba(234,88,12,0.2)] hover:shadow-[0_0_25px_rgba(234,88,12,0.5)]"
+      aria-label="Confirmar reserva"
+    >
+      Confirmar Reserva
+    </button>
+  </form>
+  
+  <p class="text-[11px] text-neutral-500 mt-8 text-center uppercase tracking-widest font-light">
+    Para experiencias privadas, envíe un correo a reservations@cima.com
+  </p>
+</div>
+
+<style>
+  /* Fix date input icon color in dark mode */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 0.5;
+    cursor: pointer;
+  }
+  input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+  }
+</style>

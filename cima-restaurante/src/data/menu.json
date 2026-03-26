@@ -1,0 +1,104 @@
+{
+  "categories": [
+    {
+      "id": "entradas",
+      "title": "Para Compartir",
+      "items": [
+        {
+          "name": "Pan Artesanal al Horno",
+          "description": "Pan de masa madre, servido con mantequilla batida a las finas hierbas y sal marina ahumada.",
+          "price": "9",
+          "image": "https://images.unsplash.com/photo-1505252585461-04db1eb84625?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          "name": "Burrata del Bosque",
+          "description": "Burrata fresca cremosa, reducción de balsámico añejo, tomates reliquia asados, albahaca y tostadas crujientes de ajo.",
+          "price": "22",
+          "tags": ["Vegetariano", "Sin Gluten (opcional)"],
+          "image": "https://images.unsplash.com/photo-1525333682355-e31a3a9ee2a3?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          "name": "Ceviche de Trucha Limpio",
+          "description": "Trucha de lago fresca, marinada en cítricos de la casa, aguacate, rábano picante encurtido y cilantro, acompañado de totopos de maíz azul.",
+          "price": "24",
+          "tags": ["Sin Gluten", "Pescado Sostenible"],
+          "image": "https://images.unsplash.com/photo-1519708227418-a87561089e01?auto=format&fit=crop&q=80&w=800"
+        }
+      ]
+    },
+    {
+      "id": "principales",
+      "title": "Platos Principales",
+      "items": [
+        {
+          "name": "Bife de Chorizo a la Parrilla",
+          "description": "Corte premium de 10oz, puré de patatas trufado, espárragos carbonizados a la parrilla y reducción de vino tinto oscuro.",
+          "price": "48",
+          "tags": ["Sin Gluten"],
+          "image": "https://images.unsplash.com/photo-1546830072-b887c55c4341?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          "name": "Pasta Fresca de Hongos Silvestres",
+          "description": "Pappardelle hecho a mano, crema suave de trufa y ajo asado, variedad de hongos forrajeados, y lluvia de queso parmesano reggiano.",
+          "price": "32",
+          "tags": ["Vegetariano"],
+          "image": "https://images.unsplash.com/photo-1565119383026-3a8e0cfb6a35?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          "name": "Salmón Cítrico Glaseado",
+          "description": "Lomo de salmón salvaje cocinado a baja temperatura, risotto de quinoa al limón, puré de guisantes tiernos y micro-vegetales frescos.",
+          "price": "38",
+          "tags": ["Sin Gluten", "Rico en Omega-3"],
+          "image": "https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          "name": "Curry de Garbanzos y Coliflor Asada",
+          "description": "Curry aromático con leche de coco, servido sobre arroz jazmín al vapor, naan crujiente y cilantro fresco.",
+          "price": "26",
+          "tags": ["Vegano", "Ligeramente Picante"],
+          "image": "https://images.unsplash.com/photo-1586230848864-ee7e2d27d7b0?auto=format&fit=crop&q=80&w=800"
+        }
+      ]
+    },
+    {
+      "id": "guarniciones",
+      "title": "Acompañamientos",
+      "items": [
+        {
+          "name": "Patatas Fritas Estilo Bistro",
+          "description": "Corte fino con sal marina y alioli de ajo de la casa.",
+          "price": "10",
+          "tags": ["Vegetariano"],
+          "image": "https://images.unsplash.com/photo-1630384077809-85b85bc43c2b?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          "name": "Ensalada Verde de Campo",
+          "description": "Mezcla de hojas jóvenes, rábano cortado fino, vinagreta ligera de limón y hierbas.",
+          "price": "12",
+          "tags": ["Vegano", "Sin Gluten"],
+          "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800"
+        }
+      ]
+    },
+    {
+      "id": "postres",
+      "title": "Cierre Dulce",
+      "items": [
+        {
+          "name": "Tarta de Queso Cima",
+          "description": "Textura extra suave con compota de bayas silvestres y base de galleta cruda.",
+          "price": "14",
+          "tags": ["Vegetariano"],
+          "image": "https://images.unsplash.com/photo-1565958011703-4f98e6dbaf80?auto=format&fit=crop&q=80&w=800"
+        },
+        {
+          "name": "Fondant de Chocolate Oscuro",
+          "description": "Corazón líquido de chocolate 70% cacao, acompañado de helado artesanal de vainilla y crujiente de almendras.",
+          "price": "15",
+          "tags": ["Vegetariano"],
+          "image": "https://images.unsplash.com/photo-1511381939415-e44aa11739dd?auto=format&fit=crop&q=80&w=800"
+        }
+      ]
+    }
+  ]
+}

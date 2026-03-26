@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold-400: #e0ca79;
+  --color-gold-500: #d4af37;
+  --color-gold-600: #b5952f;
+  --color-orange-400: #fb923c;
+  --color-orange-500: #f97316;
+  --color-orange-600: #ea580c;
+  --color-cream: #f4f0eb;
+  --color-cream-dark: #e8e2d8;
+  
+  --font-cinzel: "Cinzel", serif;
+  --font-outfit: "Outfit", sans-serif;
+  --font-cursive: "Great Vibes", cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0a0a0a;
+}
+
+body {
+  font-family: var(--font-outfit);
+  color: #d4d4d4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-cinzel);
+}
+
+.menu-leader {
+  flex-grow: 1;
+  border-bottom: 2px dotted #3f3f46;
+  margin: 0 1rem;
+  position: relative;
+  top: -8px;
+  opacity: 0.5;
+}
+
+/* Animaciones suaves */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slowZoom {
+  from { transform: scale(1.05); }
+  to { transform: scale(1); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.animate-slow-zoom {
+  animation: slowZoom 25s ease-out forwards;
+}
+
+/* Efecto hover subrayado dorado */
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -4px;
+  left: 50%;
+  background-color: var(--color-gold-500, #d4af37);
+  transition: all 0.3s ease-out;
+}
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Texto vertical editorial */
+.vertical-text {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}

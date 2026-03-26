@@ -1,0 +1,64 @@
+---
+---
+<nav class="fixed w-full z-50 bg-[#0a0a0a]/80 backdrop-blur-lg border-b border-white/5 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+    <div class="flex justify-between h-16 sm:h-20 md:h-24 items-center">
+      
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex items-center">
+        <a href="/" class="transition-transform duration-500 hover:scale-105 flex items-center gap-2 sm:gap-4">
+          <!-- He colocado la ruta '/logo.png'. Debes guardar la imagen que me enviaste en la carpeta public/logo.png -->
+          <img src="/logo.png" alt="Cima Restaurante" class="h-12 sm:h-16 md:h-20 w-auto object-contain" onerror="this.outerHTML='<span class=\'text-2xl sm:text-3xl md:text-4xl font-cinzel tracking-[0.2em] uppercase text-gold-500\'>CIMA</span>'" />
+          <span class="text-xl sm:text-2xl md:text-4xl text-gold-500 tracking-wide font-normal uppercase" style="font-family: var(--font-cinzel);">LA CIMA</span>
+        </a>
+      </div>
+      
+      <!-- Desktop Links - Text Ampliado -->
+      <div class="hidden lg:flex items-center space-x-6 xl:space-x-12 text-sm xl:text-base tracking-[0.15em] uppercase font-normal text-neutral-300" style="font-family: var(--font-cinzel);">
+        <a href="/" class="nav-link hover:text-gold-500 transition-colors duration-300">Inicio</a>
+        <a href="/menu" class="nav-link hover:text-gold-500 transition-colors duration-300">Menú</a>
+        <a href="/gallery" class="nav-link hover:text-gold-500 transition-colors duration-300">Atmósfera</a>
+        <a href="/contact" class="nav-link hover:text-gold-500 transition-colors duration-300">Reservaciones</a>
+      </div>
+      
+      <!-- CTA - Naranja para resaltar -->
+      <div class="hidden lg:flex">
+        <a href="/contact#reserva" class="bg-orange-600 text-white hover:bg-orange-500 px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 transition-all duration-500 uppercase text-xs sm:text-sm lg:text-base tracking-[0.2em] font-semibold" aria-label="Reservar Mesa">
+          Reservar
+        </a>
+      </div>
+      
+      <!-- Mobile menu button -->
+      <div class="lg:hidden flex items-center">
+        <button id="mobile-menu-btn" class="text-neutral-300 hover:text-gold-500 focus:outline-none p-2" aria-label="Menú">
+          <svg class="h-6 w-6 sm:h-8 sm:w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden bg-[#0a0a0a] absolute w-full transition-all border-b border-white/5">
+    <div class="px-3 sm:px-4 pt-4 pb-6 sm:pb-8 space-y-4 sm:space-y-6 text-center">
+      <a href="/" class="block text-sm sm:text-base font-normal uppercase tracking-widest text-neutral-300 hover:text-gold-500 transition-colors py-2" style="font-family: var(--font-cinzel);">Inicio</a>
+      <a href="/menu" class="block text-sm sm:text-base font-normal uppercase tracking-widest text-neutral-300 hover:text-gold-500 transition-colors py-2" style="font-family: var(--font-cinzel);">Menú</a>
+      <a href="/gallery" class="block text-sm sm:text-base font-normal uppercase tracking-widest text-neutral-300 hover:text-gold-500 transition-colors py-2" style="font-family: var(--font-cinzel);">Atmósfera</a>
+      <a href="/contact" class="block text-sm sm:text-base font-normal uppercase tracking-widest text-neutral-300 hover:text-gold-500 transition-colors py-2" style="font-family: var(--font-cinzel);">Reservaciones</a>
+      <a href="/contact#reserva" class="block mx-4 sm:mx-8 mt-4 sm:mt-6 bg-orange-600 text-white py-3 sm:py-4 uppercase text-sm sm:text-base font-semibold tracking-widest hover:bg-orange-500 transition-colors" aria-label="Reservar Mesa">Reservar</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  document.addEventListener('astro:page-load', () => {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if (btn && menu) {
+      btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    }
+  });
+</script>

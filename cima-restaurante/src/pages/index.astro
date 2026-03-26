@@ -1,0 +1,64 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Hero from '../components/Hero.astro';
+import ReservationBox from '../components/ReservationBox.astro';
+---
+
+<MainLayout>
+  <!-- Full bleed hero -->
+  <Hero 
+    title=""  
+    imagePath="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+    ctaText="Explorar Experiencia"
+    ctaLink="/menu"
+    size="large"
+  />
+
+  <!-- High Contrast Light Section -->
+  <section class="py-20 sm:py-24 lg:py-32 xl:py-40 bg-[var(--color-cream)] text-[#0a0a0a] relative overflow-hidden">
+    <!-- Decorative huge text -->
+    <div class="absolute -right-20 top-20 text-[15rem] font-cinzel font-bold text-black/5 select-none pointer-events-none whitespace-nowrap hidden lg:block">SAVOUR</div>
+    
+    <div class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-16 2xl:px-24">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center">
+        <!-- Content -->
+        <div class="space-y-12 order-2 lg:order-1 animate-fade-in opacity-0 relative z-10" style="animation-delay: 0.3s;">
+          <h2 class="text-4xl sm:text-5xl md:text-7xl font-cinzel uppercase tracking-[0.05em] leading-[1.1] text-black">
+            <span class="whitespace-nowrap">El Arte de la</span> <br/>
+            <span class="text-gold-600 italic lowercase font-medium tracking-normal">degustación</span>
+          </h2>
+          <div class="w-24 h-[3px] bg-orange-500"></div>
+          <p class="text-lg sm:text-xl text-neutral-800 font-light leading-relaxed tracking-wide max-w-xl">
+            CIMA ofrece un delicado equilibrio entre lo salvaje y lo refinado. En contraste con la inmensidad de la montaña, nuestros menús se inspiran directamente en la tierra que nos rodea, recolectada a mano y preparada con técnicas contemporáneas excepcionales.
+          </p>
+          <a href="/menu" class="inline-block mt-8 text-black font-semibold uppercase tracking-[0.2em] text-sm sm:text-sm md:text-base pb-2 border-b-2 border-gold-600 hover:text-orange-600 hover:border-orange-600 transition-colors duration-300">
+            Descubrir la Colección
+          </a>
+        </div>
+        <!-- Image Asymmetry -->
+        <div class="relative order-1 lg:order-2 h-[800px] w-full animate-fade-in opacity-0 shadow-2xl">
+          <img 
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80" 
+            alt="Plato de alta cocina artística" 
+            class="w-full h-full object-cover transition-all duration-1000 origin-center"
+            loading="lazy"
+          />
+          <!-- Offset frame decoration -->
+          <div class="absolute -bottom-10 -left-10 w-full h-full border-2 border-gold-500/40 -z-10 hidden md:block"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dark Section Extended -->
+  <section class="py-24 sm:py-32 lg:py-40 lg:py-48 bg-[#050505] relative text-center">
+    <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')] bg-fixed bg-cover opacity-[0.08] mix-blend-luminosity"></div>
+    
+    <div class="w-full max-w-[1400px] mx-auto px-4 sm:px-6 relative z-10">
+      <h2 class="text-3xl sm:text-4xl lg:text-7xl font-cinzel text-white uppercase tracking-[0.2em] font-light mb-16 sm:mb-20 shadow-black drop-shadow-lg">
+        Asegure su lugar
+      </h2>
+      <ReservationBox />
+    </div>
+  </section>
+</MainLayout>
